@@ -56,7 +56,7 @@ class MealBuilder():
     def build(self): 
         return Meal(self.main, self.drink, self.side)
 
-
+# Concrete Builder #1
 class ClassicBurger(Burger): 
 
     def __init__(self): 
@@ -65,7 +65,7 @@ class ClassicBurger(Burger):
         self.toppings = ["lettuce"]
         self.cooking_level = "well done"
 
-
+# Overriding + Inheritance example
 class CheeseBurger(ClassicBurger): 
     
     def __init__(self): 
@@ -78,6 +78,7 @@ class AmericanBurger(CheeseBurger):
         super().__init__()
         self.toppings.extend(["bacon", "bbq sauce"])
 
+# Concrete Builder #2
 class WagyuSteak(Steak):
 
     def __init__(self): 
